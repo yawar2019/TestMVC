@@ -1,0 +1,87 @@
+﻿@model IEnumerable<TestReport2.Reports.CustInOut>
+
+@{
+    ViewBag.Title = "getView";
+}
+
+<h2>getView</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Staying)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckedInDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckOutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Paid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remain)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassportNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Staying)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckedInDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckOutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remain)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

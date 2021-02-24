@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CheckInOutDataset" targetNamespace="http://tempuri.org/CheckInOutDataset.xsd" xmlns:mstns="http://tempuri.org/CheckInOutDataset.xsd" xmlns="http://tempuri.org/CheckInOutDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="HotelManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HotelManagementConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.HotelManagementConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HotelManagementConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CheckedInOut.CustomerId, CheckedInOut.CheckedInDate, Customers.CustomerId AS Expr1, Customers.CustomerName, CheckedInOut.Staying, CheckedInOut.CheckOutDate, CheckedInOut.Total, CheckedInOut.Paid, 
+                         CheckedInOut.Remain, Customers.CardNumber, Customers.PassportNumber
+FROM            CheckedInOut INNER JOIN
+                         Customers ON CheckedInOut.CustomerId = Customers.CustomerId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerId" DataSetColumn="CustomerId" />
+              <Mapping SourceColumn="CheckedInDate" DataSetColumn="CheckedInDate" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="CustomerName" DataSetColumn="CustomerName" />
+              <Mapping SourceColumn="Staying" DataSetColumn="Staying" />
+              <Mapping SourceColumn="CheckOutDate" DataSetColumn="CheckOutDate" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Paid" DataSetColumn="Paid" />
+              <Mapping SourceColumn="Remain" DataSetColumn="Remain" />
+              <Mapping SourceColumn="CardNumber" DataSetColumn="CardNumber" />
+              <Mapping SourceColumn="PassportNumber" DataSetColumn="PassportNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CheckInOutDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CheckInOutDataset" msprop:Generator_UserDSName="CheckInOutDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerId" msprop:Generator_ColumnVarNameInTable="columnCustomerId" msprop:Generator_ColumnPropNameInRow="CustomerId" msprop:Generator_ColumnPropNameInTable="CustomerIdColumn" msprop:Generator_UserColumnName="CustomerId" type="xs:int" minOccurs="0" />
+              <xs:element name="CheckedInDate" msprop:Generator_ColumnVarNameInTable="columnCheckedInDate" msprop:Generator_ColumnPropNameInRow="CheckedInDate" msprop:Generator_ColumnPropNameInTable="CheckedInDateColumn" msprop:Generator_UserColumnName="CheckedInDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Expr1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
+              <xs:element name="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_UserColumnName="CustomerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Staying" msprop:Generator_ColumnVarNameInTable="columnStaying" msprop:Generator_ColumnPropNameInRow="Staying" msprop:Generator_ColumnPropNameInTable="StayingColumn" msprop:Generator_UserColumnName="Staying" type="xs:int" minOccurs="0" />
+              <xs:element name="CheckOutDate" msprop:Generator_ColumnVarNameInTable="columnCheckOutDate" msprop:Generator_ColumnPropNameInRow="CheckOutDate" msprop:Generator_ColumnPropNameInTable="CheckOutDateColumn" msprop:Generator_UserColumnName="CheckOutDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Paid" msprop:Generator_ColumnVarNameInTable="columnPaid" msprop:Generator_ColumnPropNameInRow="Paid" msprop:Generator_ColumnPropNameInTable="PaidColumn" msprop:Generator_UserColumnName="Paid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Remain" msprop:Generator_ColumnVarNameInTable="columnRemain" msprop:Generator_ColumnPropNameInRow="Remain" msprop:Generator_ColumnPropNameInTable="RemainColumn" msprop:Generator_UserColumnName="Remain" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CardNumber" msprop:Generator_ColumnVarNameInTable="columnCardNumber" msprop:Generator_ColumnPropNameInRow="CardNumber" msprop:Generator_ColumnPropNameInTable="CardNumberColumn" msprop:Generator_UserColumnName="CardNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PassportNumber" msprop:Generator_ColumnVarNameInTable="columnPassportNumber" msprop:Generator_ColumnPropNameInRow="PassportNumber" msprop:Generator_ColumnPropNameInTable="PassportNumberColumn" msprop:Generator_UserColumnName="PassportNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Expr1" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
